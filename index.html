@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máquina de escribir</title>
+  <style>
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+
+      25% {
+        width: 7ch;
+      }
+
+      50% {
+        width: 7ch;
+      }
+
+      100% {
+        width: 0;
+      }
+    }
+
+    @keyframes blinking {
+      to {
+        border-color: transparent;
+      }
+    }
+
+    body {
+      margin: 0;
+      background-color: #16181d;
+      color: #f6f7f9;
+      font-family: monospace;
+    }
+
+    span {
+      font-size: 5rem;
+      display: block;
+      border-right: 0.5rem solid #f6f7f9;
+      width: 0;
+      overflow: hidden;
+      animation:
+        typing 2s steps(7) 0s infinite,
+        blinking 1s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <span>Alfonso</span>
+</body>
+
+</html>
